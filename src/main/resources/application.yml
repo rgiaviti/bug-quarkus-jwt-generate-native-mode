@@ -1,0 +1,11 @@
+smallrye:
+  jwt:
+    sign:
+      key:
+        location: "META-INF/keys/PrivateKey.pem"
+    encrypt:
+      key:
+        location: "META-INF/keys/PublicKey.pem"
+    verify:
+      key:
+        location: "META-INF/keys/PublicKey.pem"

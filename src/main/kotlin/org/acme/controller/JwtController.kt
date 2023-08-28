@@ -1,6 +1,7 @@
 package org.acme.controller
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import io.quarkus.runtime.annotations.RegisterForReflection
 import jakarta.ws.rs.POST
 import jakarta.ws.rs.Path
 import jakarta.ws.rs.Produces
@@ -18,6 +19,7 @@ class JwtController(private val tokenService: TokenService) {
     }
 }
 
+@RegisterForReflection //solution
 data class TokenResponse(
     @field:JsonProperty("token")
     val token: String
